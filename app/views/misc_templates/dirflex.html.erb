@@ -1,4 +1,4 @@
-<h1>Director #<%= @id %> Details</h1>
+<h1>Director #<%= @id %> details</h1>
 
 <a href="/directors">Go back</a>
 
@@ -37,7 +37,7 @@
         <td><img src="<%= movie.image%>"></td>
         <td><%= movie.title %></td>
         <td><%= movie.year %></td>
-        <td><%= @target.name %></td>
+        <td><%= Director.where({ :id => movie.director_id}).at(0).name %></td>
         <td><a href = "/movies/<%= movie.id %>" >Show details</a></td>
       </tr>
     <% end %>
