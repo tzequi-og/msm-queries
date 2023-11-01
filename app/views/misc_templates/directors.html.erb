@@ -1,0 +1,22 @@
+<h1>Directors</h1>
+
+<table border="1">
+  <tbody>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Dob</th>
+      <th></th>
+    </tr>
+    <% @dirs.each do |person| %>
+      <tr>
+        <td><%= person.id %></td>
+        <td><%= person.name %></td>
+        <td><img src="<%= person.image%>"></td>
+        <td><%= person.dob %></td>
+        <td><a href = "/directors/<%= person.id %>" >Show details</a></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
